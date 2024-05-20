@@ -27,15 +27,19 @@ document.getElementById('randomNumber').textContent = numberToFrench[randomNumbe
 function checkGuess() {
     const guessInput = document.getElementById('guessInput');
     const message = document.getElementById('message');
-    const userGuess = guessInput.value.trim().toLowerCase();
+    const userGuess = parseInt(guessInput.value.trim(), 10);
 
-    const correctAnswer = numberToFrench[randomNumber].toLowerCase();
-    
-    if (userGuess === correctAnswer) {
-        message.textContent = "Félicitations! Vous avez deviné correctement.";
+    if (isNaN(userGuess)) {
+        message.textContent = "Veuillez entrer un nombre valide.";
+        message.style.color = "red";
+        return;
+    }
+
+    if (userGuess === randomNumber) {
+        message.textContent = `Félicitations! Vous avez deviné correctement. Le nombre était "${numberToFrench[randomNumber]}".`;
         message.style.color = "green";
     } else {
-        message.textContent = "Incorrect. Essayez encore!";
+        message.textContent = `Incorrect. Essayez encore! Le nombre était "${numberToFrench[randomNumber]}".`;
         message.style.color = "red";
     }
 }
