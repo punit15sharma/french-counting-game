@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Matching Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jeu de Correspondance de Nombre</h1>
+        <p>Le nombre affiché est: <span id="randomNumber"></span></p>
+        <p>Entrez le même nombre en mots ci-dessous :</p>
+        <input type="text" id="guessInput" placeholder="Entrez le nombre en mots">
+        <button onclick="checkGuess()">Vérifier</button>
+        <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
