@@ -42,4 +42,12 @@ function checkGuess() {
         message.textContent = `Incorrect. Essayez encore! Le nombre était "${numberToFrench[randomNumber]}".`;
         message.style.color = "red";
     }
+
+    // Reset the game after 5 seconds
+    setTimeout(() => {
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+        document.getElementById('randomNumber').textContent = numberToFrench[randomNumber];
+        guessInput.value = '';
+        message.textContent = '';
+    }, 5000);
 }
