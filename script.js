@@ -49,5 +49,5 @@ function checkGuess() {
         document.getElementById('randomNumber').textContent = numberToFrench[randomNumber];
         guessInput.value = '';
         message.textContent = '';
-    }, 5000);
+    }, 6000);
 }
