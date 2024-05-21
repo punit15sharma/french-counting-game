@@ -36,10 +36,10 @@ function checkGuess() {
     }
 
     if (userGuess === randomNumber) {
-        message.textContent = `Félicitations! Vous avez deviné correctement. Le nombre était "${numberToFrench[randomNumber]}".`;
+        message.textContent = `Félicitations! Vous avez deviné correctement. Le nombre était "${randomNumber}".`;
         message.style.color = "green";
     } else {
-        message.textContent = `Incorrect. Essayez encore! Le nombre était "${numberToFrench[randomNumber]}".`;
+        message.textContent = `Incorrect. Essayez encore! Le nombre était "${randomNumber}".`;
         message.style.color = "red";
     }
 
