@@ -39,7 +39,7 @@ function checkGuess() {
         message.textContent = `Félicitations! Vous avez deviné correctement. Le nombre était "${randomNumber}".`;
         message.style.color = "green";
     } else {
-        message.textContent = `Incorrect. Essayez encore! Le nombre était "${randomNumber}".`;
+        message.innerHTML = `Incorrect. Essayez encore! Le nombre était "${randomNumber}". Read <a href="https://blog.rosettastone.com/learn-french-numbers-1-100-with-these-french-counting-tips/">this</a> article !!`;
         message.style.color = "red";
     }
 
